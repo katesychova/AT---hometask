@@ -6,7 +6,7 @@ import com.DAY_4.people.Person;
 
 public abstract class Engineer extends Person {
     private int anxiety = 3;
-    private int skill = 0 + (int) (Math.random() * ((10 - 0) + 1));
+    private int skill;
 
     public int getAnxiety() {
         return anxiety;
@@ -21,7 +21,7 @@ public abstract class Engineer extends Person {
     }
 
     public void setSkill(int skill) {
-        this.skill = skill;
+        this.skill = 0 + (int) (Math.random() * ((10 - 0) + 1));
     }
 
     public Result executeTest(Test test) {
