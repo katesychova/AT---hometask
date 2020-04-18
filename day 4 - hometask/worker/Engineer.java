@@ -4,6 +4,8 @@ import com.DAY_4.entity.Result;
 import com.DAY_4.entity.Test;
 import com.DAY_4.people.Person;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public abstract class Engineer extends Person {
     private int anxiety = 3;
     private int skill;
@@ -21,7 +23,11 @@ public abstract class Engineer extends Person {
     }
 
     public void setSkill(int skill) {
-        this.skill = 0 + (int) (Math.random() * ((10 - 0) + 1));
+        this.skill = skill;
+    }
+
+    public void setRandomSkills(){
+        this.skill = ThreadLocalRandom.current().nextInt(1,11);
     }
 
     public Result executeTest(Test test) {

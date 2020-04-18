@@ -22,14 +22,14 @@ public abstract class Test implements Functionable<Engineer, Result> {
     }
 
     public void setInstability(int instability) {
-        if (instability <= 0) {
-            instability = 1;
-        } else if (instability > 10) {
-            instability = 10;
+        if (instability > 10) {
+            this.instability = 10;
+        } else if (instability == 0) {
+            this.instability = 1;
         }
     }
 
-    public Test(TestLevel testLevel, int instabitity) {
+    public Test(TestLevel testLevel, int instability) {
         this.complexity = testLevel.COMPLEXITY;
         this.setInstability(instability);
     }
