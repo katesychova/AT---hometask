@@ -22,11 +22,16 @@ public abstract class Test implements Functionable<Engineer, Result> {
     }
 
     public void setInstability(int instability) {
-        this.instability = instability;
+        if (instability <= 0) {
+            instability = 1;
+        } else if (instability > 10) {
+            instability = 10;
+        }
     }
 
-    public Test(TestLevel testLevel) {
+    public Test(TestLevel testLevel, int instabitity) {
         this.complexity = testLevel.COMPLEXITY;
+        this.setInstability(instability);
     }
 
     @Override
@@ -38,10 +43,6 @@ public abstract class Test implements Functionable<Engineer, Result> {
         } else {
             anxiety = 1;
         }
-        if (complexity * instability * anxiety > 30) {
-            return Result.FAILED;
-        } else {
-            return Result.PASSED;
-        }
+        return complexity * instability * anxiety / engineer.getSkill() > 30 ? Result.FAILED : Result.PASSED;
     }
 }
