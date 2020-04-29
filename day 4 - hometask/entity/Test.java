@@ -26,7 +26,7 @@ public abstract class Test implements Functionable<Engineer, Result> {
             this.instability = 10;
         } else if (instability == 0) {
             this.instability = 1;
-        }
+        } else this.instability = instability;
     }
 
     public Test(TestLevel testLevel, int instability) {
@@ -46,3 +46,5 @@ public abstract class Test implements Functionable<Engineer, Result> {
         return complexity * instability * anxiety / engineer.getSkill() > 30 ? Result.FAILED : Result.PASSED;
     }
 }
+
+
