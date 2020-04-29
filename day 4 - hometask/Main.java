@@ -13,10 +13,10 @@ public class Main {
         ManualTest manualTest = new ManualTest(TestLevel.GUI, 2);
         AutomationEngineer automationEngineer = new AutomationEngineer();
         AutomatedTest automatedTest = new AutomatedTest(TestLevel.API, 4);
-        TestEngineer testEngineer = new TestEngineer();
-        System.out.println("Test " + manualTest.apply(automationEngineer));
-        System.out.println("Test " + automatedTest.apply(testEngineer));
-        System.out.println("Test " + manualTest.apply(testEngineer));
-        System.out.println("Test " + automatedTest.apply(automationEngineer));
+//        TestEngineer testEngineer = new TestEngineer();
+//        System.out.println("Test " + manualTest.apply());
+//        System.out.println("Test " + automatedTest.apply());
+//        System.out.println("Test " + manualTest.apply());
+//        System.out.println("Test " + automatedTest.apply());
     }
 }
