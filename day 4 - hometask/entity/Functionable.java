@@ -1,5 +1,7 @@
 package com.DAY_4.entity;
 
-public interface Functionable <Engineer, Result> {
+import com.DAY_4.worker.Engineer;
+
+public interface Functionable<Engineer, Result> {
     public Result apply(Engineer engineer);
 }
