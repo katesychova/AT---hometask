@@ -26,11 +26,11 @@ public abstract class Engineer extends Person {
         this.skill = skill;
     }
 
-    public void setRandomSkills(){
-        this.skill = ThreadLocalRandom.current().nextInt(1,11);
+    public void setRandomSkills() {
+        this.skill = ThreadLocalRandom.current().nextInt(1, 11);
     }
 
     public Result executeTest(Test test) {
-        return null;
+        return test.apply(this);
     }
 }
